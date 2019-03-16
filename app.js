@@ -16,7 +16,7 @@ var app = express();
 
 // Inicia Conexion DB
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://ecommerce:ecommerce123@cluster0-ilicw.mongodb.net/ecommerce?retryWrites=true';
+var mongoDB = 'urlConection';
 mongoose.connect(mongoDB, {useNewUrlParser: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
