@@ -7,8 +7,22 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var detalleRouter = require('./routes/detalle');
+var AdminPorductosRouter = require('./routes/admin/productos');
+var api = require('./routes/api/index');
+
 
 var app = express();
+
+
+// Inicia Conexion DB
+var mongoose = require('mongoose');
+var mongoDB = 'mongodb+srv://ecommerce:ecommerce123@cluster0-ilicw.mongodb.net/ecommerce?retryWrites=true';
+mongoose.connect(mongoDB, {useNewUrlParser: true});
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+// Termina Conexion DB
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +37,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/detalle', detalleRouter);
+app.use('/api/', api);
+app.use('/admin/productos', AdminPorductosRouter);
+
+
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {

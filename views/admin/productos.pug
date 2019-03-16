@@ -1,0 +1,32 @@
+extends ../layouts/standard.pug
+
+block content
+
+  .col-md-4.col-md-offset-4
+    form(id="formAddProducto", method="post", enctype='multipart/form-data',  action='#',)
+      input(type='hidden', name='_csrf', value='#{_csrf}')
+      .form-group
+        label Nombre:
+        input.form-control(type="text", placeholder="Nombre del producto", name="pNombre", required="true")
+
+      .form-group
+        label Tipo:
+        select.form-control(type="text", name="pTipo")
+          option(value="1") Categoria uno
+          option(value="2") Categoria dos
+
+      .form-group
+        label Imagen:
+        input.form-control(type="file", name="pImg", required="true")
+
+      .form-group
+        label Descripción:
+        textarea.form-control(type="text", rows="10", cols="30" name="pDescripcion", required="true")
+
+      .form-group
+        label Precio:
+        input.form-control(type="text", placeholder="Nombre del producto", name="pPrecio", required="true")
+
+      .form-group
+        button.btn.btn-success(type="submit") Agregar
+  script(src="/javascripts/productosScript.js")
