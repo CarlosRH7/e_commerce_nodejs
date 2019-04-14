@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var app = express();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -11,12 +12,12 @@ var AdminPorductosRouter = require('./routes/admin/productos');
 var api = require('./routes/api/index');
 
 
-var app = express();
+
 
 
 // Inicia Conexion DB
 var mongoose = require('mongoose');
-var mongoDB = 'urlConection';
+var mongoDB = 'mongodb+srv://ecommerce:ecommerce123@cluster0-ilicw.mongodb.net/test?retryWrites=true';
 mongoose.connect(mongoDB, {useNewUrlParser: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;

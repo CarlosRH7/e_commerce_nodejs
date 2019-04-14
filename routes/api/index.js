@@ -14,24 +14,12 @@ router.get('/producto', function(req, res) {
   }); 
 });
 
-router.post('/producto', async (req, res)=> {
-  // console.log(req.body.pNombre);
-  // return res.sendStatus(201);
-  
-
-  // var nombre = req.body.pNombre;
-  // var tipo = req.body.pTipo;
-  // var img = req.body.pImg;
-  // var descripcion = req.body.pDescripcion;
-  // var precio = req.body.pPrecio;
-
-  
-  // if (!nombre ||  !precio || !descripcion || !tipo) {
-  //   console.log('entro en el if');
-  //   return res.sendStatus(400);
-  // }
+router.post('/producto', function(req, res){
+  console.log('query: ', req.query);
+  console.log('body: ', req.body);
 
   var model = new ProductoModel();
+
   model.nombre = 'Tarjetas de Novios dos';
   model.tipo = 2;
   model.img = 'productoDos.png';
@@ -47,11 +35,6 @@ router.post('/producto', async (req, res)=> {
   });
 
 });
-
-
-
-
-
 
 
 module.exports = router;

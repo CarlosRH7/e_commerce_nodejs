@@ -6,4 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('admin/productos', { title: 'Administrador de productos' });
 });
 
+
+
 module.exports = router;
