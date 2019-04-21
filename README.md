@@ -38,15 +38,16 @@ Clona este repositorio a tu máquina local usando:
 
 Para poder iniciar la aplicación web de forma correcta debes crear una base de datos y un usuario y agregar la configuración en el archivo app.js 
 
-    ```javascript
-    // Config DB
-    var mongoose = require('mongoose');
-    var mongoDB = 'My url config';
-    mongoose.connect(mongoDB, {useNewUrlParser: true});
-    mongoose.Promise = global.Promise;
-    var db = mongoose.connection;
-    db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-    ```
+```javascript
+// Config DB
+
+var mongoose = require('mongoose');
+var mongoDB = 'My url config';
+mongoose.connect(mongoDB, {useNewUrlParser: true});
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+```
     
 ## Arrancando
 
@@ -63,4 +64,4 @@ Iniciando
 
 ## Capturas de pantalla
 
- <img src="https://ecommercepipa.herokuapp.com/images/Inicio.jpg" width="80%">
+ <img src="https://ecommercepipa.herokuapp.com/images/Inicio.jpg" width="100%">
