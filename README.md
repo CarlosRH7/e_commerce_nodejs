@@ -62,4 +62,4 @@ Iniciando
 
 ## Capturas de pantalla
 
- <img src="https://www.logolynx.com/images/logolynx/56/56afea50b83164e3e272d4ebeccd94fb.png" width="100px">
+ <img src="https://ecommercepipa.herokuapp.com/images/Inicio.jpg" width="100px">
