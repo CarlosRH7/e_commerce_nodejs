@@ -38,6 +38,7 @@ Clona este repositorio a tu máquina local usando:
 
 Para poder iniciar la aplicación web de forma correcta debes crear una base de datos y un usuario y agregar la configuración en el archivo app.js 
 
+    ```javascript
     // Config DB
     var mongoose = require('mongoose');
     var mongoDB = 'My url config';
@@ -45,20 +46,20 @@ Para poder iniciar la aplicación web de forma correcta debes crear una base de 
     mongoose.Promise = global.Promise;
     var db = mongoose.connection;
     db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
+    ```
     
 ## Arrancando
 
 Verificar la instalación de Node.js y npm
 
-    node -v
-    npm -v
+    $ node -v
+    $ npm -v
 
 Iniciando 
 
-    cd e_commerce_nodejs
-    npm install
-    npm start
+    $ cd e_commerce_nodejs
+    $ npm install
+    $ npm start
 
 ## Capturas de pantalla
 
