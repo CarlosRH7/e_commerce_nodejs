@@ -22,7 +22,7 @@ Esta es una aplicación web de comercio electrónico desarrollada principalmente
 
 
 
-## Requirements
+## Requerimientos
 
 Descargue e instale NodeJs.
 + [Node.js](https://nodejs.org/es/)
@@ -30,14 +30,13 @@ Descargue e instale NodeJs.
 ## Instalación
 
 ### Clon
-Clona este repositorio a tu máquina local usando 
+Clona este repositorio a tu máquina local usando:
 
 	git clone https://github.com/CarlosRH7/e_commerce_nodejs.git
 
 ### Configuración de base de datos
 
-Para poder iniciar la aplicación web de forma correcta debe estar conectada a una base de datos.
-Debe crear una base de datos y un usuario para esa base de datos y agregar la configuración en el archivo app.js 
+Para poder iniciar la aplicación web de forma correcta debes crear una base de datos y un usuario y agregar la configuración en el archivo app.js 
 
     // Config DB
     var mongoose = require('mongoose');
@@ -50,11 +49,13 @@ Debe crear una base de datos y un usuario para esa base de datos y agregar la co
     
 ## Arrancando
 
-Verificar la instalación de NODE y NPM
+Verificar la instalación de Node.js y npm
+
     node -v
     npm -v
 
 Iniciando 
+
     cd e_commerce_nodejs
     npm install
     npm start
