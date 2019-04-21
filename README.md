@@ -62,4 +62,4 @@ Iniciando
 
 ## Capturas de pantalla
 
- <img src="https://ecommercepipa.herokuapp.com/images/Inicio.jpg" width="100px">
+ <img src="https://ecommercepipa.herokuapp.com/images/Inicio.jpg" width="80%">
