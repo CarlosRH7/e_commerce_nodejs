@@ -1,13 +1,29 @@
 extends ./layouts/standard.pug
 
 block content
+  .row#contentBannerDetalleProducto
+    div#bannerDetalleProducto
+      case producto.tipo
+        when 'servicios'
+          h1 SERVICIOS
+        when 'invitacion-impresa'
+          h1 INVITACIONES IMPRESAS
+        when 'invitacion-digital'
+          h1 INVITACIONES DIGITALES
 
-  .col-md-4.col-md-offset-4
-    h1= title
-    p Nombre: #{producto.nombre}
-    p Tipo: #{producto.tipo} 
-    p Descripción: #{producto.descripcion} 
-    p Precio: #{producto.precio}
+  .col-md-10.col-md-offset-1.col-sm-10.col-sm-offset-1
+    .col-md-6.col-sm-6.col-xs-12
+      img(src='/images/'+producto.img, alt=producto.nombre, width="100%")
+      .row
+        for foto in producto.gallery
+          .col-md-6
+            img(src='/images/'+foto, alt=producto.nombre, width="100%")
+    .col-md-6.col-sm-6.col-xs-12
+      h1= title
+      p Nombre: #{producto.nombre}
+      p Tipo: #{producto.tipo} 
+      p Descripción: #{producto.descripcion} 
+      p Precio: #{producto.precio}
 
     
 

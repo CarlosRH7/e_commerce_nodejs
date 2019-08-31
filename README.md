@@ -13,8 +13,8 @@ Esta es una aplicación web de comercio electrónico desarrollada principalmente
 ## Tecnologías utilizadas
 
 + [Node.js](https://nodejs.org/)
-+ [MngoDB](https://www.mongodb.com/es)
-+ [Express](https://www.mongodb.com/es)
++ [MongoDB](https://www.mongodb.com/es)
++ [Express](https://expressjs.com/es/)
 + [Bootstrap](https://getbootstrap.com/)
 + [Pug templates](https://pugjs.org/api/getting-started.html)
 + [JQuery](https://jquery.com/)
@@ -32,7 +32,7 @@ Descargue e instale NodeJs.
 ### Clon
 Clona este repositorio a tu máquina local usando:
 
-	git clone https://github.com/CarlosRH7/e_commerce_nodejs.git
+	$ git clone https://github.com/CarlosRH7/e_commerce_nodejs.git
 
 ### Configuración de base de datos
 

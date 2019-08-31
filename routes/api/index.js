@@ -15,16 +15,17 @@ router.get('/producto', function(req, res) {
 });
 
 router.post('/producto', function(req, res){
-  console.log('query: ', req.query);
-  console.log('body: ', req.body);
+  // console.log('query: ', req.query);
+  // console.log('body: ', req.body);
 
   var model = new ProductoModel();
 
-  model.nombre = 'Tarjetas de Novios dos';
-  model.tipo = 2;
-  model.img = 'productoDos.png';
-  model.descripcion = 'Esta es la descripción de mi producto'; 
-  model.precio = 15.90;
+  model.nombre = 'Producto Tres';
+  model.tipo = 'invitacion-digital';
+  model.img = '9.jpg';
+  model.gallery = ['9.jpg', '9.jpg', '9.jpg', '9.jpg'];
+  model.descripcion = 'Los recuerdos pueden incluir artículos caseros, como por ejemplo camisetas, ceniceros, reproducciones de edificios, libretas, postales, sombreros o tazas, entre muchos otros.'; 
+  model.precio = 30;
 
   model.save(function(err) {
     if (err) {

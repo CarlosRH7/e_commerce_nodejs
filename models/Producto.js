@@ -6,7 +6,8 @@ var ProductoModel = function() {
 		'nombre': String,
 		'img': String,
         'descripcion': String,
-        'precio':String,
+		'precio':String,
+		'gallery': [String],
 
 	});
 	productoSchema.index({name: 'text', tipo: 1});

@@ -2,17 +2,81 @@ extends ./layouts/standard.pug
 
 block content
 
-  .container-fluid 
+  .container-fluid
+    .row(style="Margin-top:-20px;")
+      #carousel-example-generic.carousel.slide(data-ride='carousel')
+        // Indicators
+        ol.carousel-indicators
+          li.active(data-target='#carousel-example-generic', data-slide-to='0')
+          li(data-target='#carousel-example-generic', data-slide-to='1')
+          li(data-target='#carousel-example-generic', data-slide-to='2')
+        // Wrapper for slides
+        .carousel-inner(role='listbox')
+          .item.active
+            img(src='/images/1.jpg', alt='Piña papel')
+            .carousel-caption
+              | ...
+          .item
+            img(src='/images/1.jpg', alt='Piña papel')
+            .carousel-caption
+              | ...
+        // Controls
+        a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+          span.sr-only Previous
+        a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+          span.sr-only Next
 
-    h1 SERVICIOS
+
+    p.title S E R V I C I O S
     .row#contentServicios
     
-    h1 INVITACIÓN IMPRESA
+    p.title I N V I T A C I Ó N  
+      span(style="margin-left:15px;") I M P R E S A
     .row#contenInvImpresa
 
-    h1 INVITACIÓN DIGITAL
+    p.title I N V I T A C I Ó N  
+      span(style="margin-left:15px;") D I G I T A L
     .row#contenInvDigital
 
+    .row#contentComoCotizar
+      p.title C O M O  
+        span(style="margin-left:15px;") C O T I Z A R
+      br
+      br
+      .col-md-3.col-sm-3.col-xs-12
+        img(src="/images/1.png", alt="Piña Papel")
+        br
+        br
+        p Elige el servicio que 
+          |necesitas
+        br
+      .col-md-3.col-sm-3.col-xs-12
+        img(src="/images/2.png", alt="Piña Papel")
+        br
+        br
+        p Identifica la temática 
+          |de tu evento
+        br
+      .col-md-3.col-sm-3.col-xs-12
+        img(src="/images/3.png", alt="Piña Papel")
+        br
+        br
+        p Entra a nuestro cotizador 
+          | y llena los fromularios de 
+          | acuerodoa tus necesidades 
+        br
+      .col-md-3.col-sm-3.col-xs-12
+        img(src="/images/4.png", alt="Piña Papel")
+        br
+        br
+        p Envianos tu infromación
+        br 
+
+    .row(style="margin-top:50px;")
+      div#bannerDetalles
+    
 
 
   script(src="/javascripts/home.js")

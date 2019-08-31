@@ -5,6 +5,7 @@ var ProductoModel = require('../models/Producto');
 /* GET  Detalle del producto */
 router.get('/:id', function(req, res, next) {
   console.log('ID producto'+req.params.id);
+
   ProductoModel.findOne({'_id':req.params.id})
   .exec(function(err, producto){
     if(err){
@@ -18,6 +19,7 @@ router.get('/:id', function(req, res, next) {
       producto: producto
     });
   });
+  
   
 });
 

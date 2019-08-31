@@ -14,7 +14,7 @@ var api = require('./routes/api/index');
 
 // Config DB
 var mongoose = require('mongoose');
-var mongoDB = 'url config';
+var mongoDB = 'mongodb+srv://ecommerce:ecommerce123@cluster0-ilicw.mongodb.net/ecommerce?retryWrites=true';
 mongoose.connect(mongoDB, {useNewUrlParser: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
